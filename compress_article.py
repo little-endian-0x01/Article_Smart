@@ -1,7 +1,10 @@
 from newspaper import Article
 import json
-import pprint
+# import pprint
 from json2html import *
+import webbrowser
+
+f = open("output_html.html",'w')
 
 # Declarations here
 url = input("Enter the url")
@@ -25,4 +28,7 @@ json_output = json.dumps(smart_article_dict)
 
 # pprint.pprint(json_output)
 html_output = json2html.convert(json=json_output)
-print(html_output)
+# print(html_output)
+
+f.write(html_output)
+webbrowser.open_new_tab('output_html.html')
