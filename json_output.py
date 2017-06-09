@@ -7,7 +7,6 @@ import pprint
 '''Uncomment the three lines inside the function to get KEYWORDS and SUMMARY, btw it would increase the computational cost which is obvious'''
 
 def article(url):
-    url=url
     smart_article_dict = dict()
     smart_article = Article(url)
 
@@ -22,6 +21,8 @@ def article(url):
     # smart_article_dict['Summary'] = smart_article.summary
     smart_article_dict['Publish_date'] = str(smart_article.publish_date)
     smart_article_dict['Favicon_img'] = smart_article.meta_favicon
+    smart_article_dict['Top_img'] = smart_article.top_image
+    smart_article_dict['site_name'] = smart_article.meta_data['og']['site_name']
 
     # Comment these 2 lines below for not printing the json output
     json_output = json.dumps(smart_article_dict)
