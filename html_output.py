@@ -44,7 +44,7 @@ if __name__=='__main__':
     # GET THE PUBLISHED DATE
     date_variable = (str(content['Publish_date']))[:10]
 
-    if date_variable != 'None':
+    if len(date_variable) > 9:
         html_date = """<li>%s</li>\n""" % (date_variable)
 
     else:

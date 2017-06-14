@@ -22,11 +22,11 @@ def article(url):
     smart_article_dict['Publish_date'] = str(smart_article.publish_date)
     smart_article_dict['Favicon_img'] = smart_article.meta_favicon
     smart_article_dict['Top_img'] = smart_article.top_image
-    smart_article_dict['site_name'] = smart_article.meta_data['og']['site_name']
+    #smart_article_dict['site_name'] = smart_article.meta_data['og']['site_name']
 
     # Comment these 2 lines below for not printing the json output
-    json_output = json.dumps(smart_article_dict)
-    pprint.pprint(json_output)
+    #json_output = json.dumps(smart_article_dict)
+    #pprint.pprint(json_output)
 
     return smart_article_dict   #Returning dictionary here, if you want json the replace it by json output
 
